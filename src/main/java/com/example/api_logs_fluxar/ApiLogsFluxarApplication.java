@@ -1,4 +1,4 @@
-package org.example.apilogsfluxar;
+package com.example.api_logs_fluxar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ApiLogsFluxarApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ApiLogsFluxarApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ApiLogsFluxarApplication.class, args);
+	}
 
 }
