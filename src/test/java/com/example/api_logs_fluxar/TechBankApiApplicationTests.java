@@ -1,13 +1,13 @@
-package org.example.apilogsfluxar;
+package com.example.api_logs_fluxar;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiLogsFluxarApplicationTests {
+class TechBankApiApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
