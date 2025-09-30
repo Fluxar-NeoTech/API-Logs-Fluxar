@@ -4,10 +4,11 @@ import com.example.api_logs_fluxar.model.UserLog;
 import com.example.api_logs_fluxar.repository.UserLogRepository;
 import com.example.api_logs_fluxar.service.UserLogService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/userlogs")
 public class UserLogController {
@@ -25,7 +26,7 @@ public class UserLogController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<UserLog> createUserLog(@RequestBody UserLog userLog) {
+    public ResponseEntity<UserLog> createUserLog(@RequestBody @Validated UserLog userLog) {
         return ResponseEntity.ok(userLogService.createUserLog(userLog));
     }
 }

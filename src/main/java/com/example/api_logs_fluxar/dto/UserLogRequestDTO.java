@@ -1,9 +1,16 @@
 package com.example.api_logs_fluxar.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.Date;
 
 public class UserLogRequestDTO {
+    @NotNull(message = "O Id do usuário não pode ser nulo")
+    @NotBlank(message = "O Id do usuário precisa ser informado")
     private String userId;
+    @NotNull(message = "A ação não pode ser nula")
+    @NotBlank(message = "A ação precisa ser informada")
     private String action;
     private Date done_at;
 
