@@ -2,16 +2,14 @@ package com.example.api_logs_fluxar.controller;
 
 import com.example.api_logs_fluxar.dto.UserLogRequestDTO;
 import com.example.api_logs_fluxar.dto.UserLogResponseDTO;
-import com.example.api_logs_fluxar.model.UserLog;
 import com.example.api_logs_fluxar.repository.UserLogRepository;
 import com.example.api_logs_fluxar.service.UserLogService;
 import jakarta.validation.Valid;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.Instant;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 @CrossOrigin("*")
 @RestController
@@ -38,6 +36,12 @@ public class UserLogController {
     @GetMapping("/search/by/action/{action}")
     public List<UserLogResponseDTO> findUserLogsByAction(@PathVariable String action) {
         return userLogService.getLogsByAction(action);
+    }
+
+    @GetMapping("/search/by/done_at/{date}")
+    public List<UserLogResponseDTO> findUserLogsByDoneAt(
+            @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        return userLogService.getLogsByDoneAt(date);
     }
 
     @PostMapping("/add")

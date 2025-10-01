@@ -1,11 +1,11 @@
 package com.example.api_logs_fluxar.dto;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class UserLogResponseDTO {
     private String user_id;
     private String action;
-    private Date done_at;
+    private LocalDate done_at;
 
     public String getUser_id() {
         return user_id;
@@ -23,11 +23,11 @@ public class UserLogResponseDTO {
         this.action = action;
     }
 
-    public Date getDone_at() {
+    public LocalDate getDone_at() {
         return done_at;
     }
 
-    public void setDone_at(Date done_at) {
+    public void setDone_at(LocalDate done_at) {
         this.done_at = done_at;
     }
 }
