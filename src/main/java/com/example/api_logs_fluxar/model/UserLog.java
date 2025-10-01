@@ -10,15 +10,15 @@ public class UserLog {
 
     @Id
     private String id;
-    private String userId;
+    private Long user_id;
     private String action;
     private Date done_at;
 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
-    public String getUserId() { return userId; }
-    public void setUserId(String userId) { this.userId = userId; }
+    public Long getUser_id() { return user_id; }
+    public void setUser_id(Long user_id) { this.user_id = user_id; }
 
     public String getAction() {
         return action;
@@ -28,6 +28,6 @@ public class UserLog {
         this.action = action;
     }
 
-    public Date getDoneAt() { return done_at; }
+    public Date getDone_at() { return done_at; }
     public void setDone_at(Date done_at) { this.done_at = done_at; }
 }
