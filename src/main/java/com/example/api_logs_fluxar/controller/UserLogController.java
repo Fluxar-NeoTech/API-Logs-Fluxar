@@ -28,7 +28,7 @@ public class UserLogController {
         return userLogService.getAllLogs();
     }
 
-    @GetMapping("/search/by/userId/{userId}")
+    @GetMapping("/search/by/userId/{user_id}")
     public List<UserLogResponseDTO> findUserLogsByUserId(@PathVariable Long user_id) {
         return userLogService.getLogsByUserId(user_id);
     }
