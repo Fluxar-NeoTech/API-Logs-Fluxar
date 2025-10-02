@@ -2,6 +2,7 @@ package com.example.api_logs_fluxar.controller;
 
 import com.example.api_logs_fluxar.dto.UserLogRequestDTO;
 import com.example.api_logs_fluxar.dto.UserLogResponseDTO;
+import com.example.api_logs_fluxar.openapi.UserLogOpenAPI;
 import com.example.api_logs_fluxar.repository.UserLogRepository;
 import com.example.api_logs_fluxar.service.UserLogService;
 import jakarta.validation.Valid;
@@ -14,7 +15,7 @@ import java.util.List;
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/userlogs")
-public class UserLogController {
+public class UserLogController implements UserLogOpenAPI {
     UserLogRepository userLogRepository;
     UserLogService userLogService;
 
