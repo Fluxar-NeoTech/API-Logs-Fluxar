@@ -3,15 +3,15 @@ package com.example.api_logs_fluxar.dto;
 import java.time.LocalDate;
 
 public class UserLogResponseDTO {
-    private String user_id;
+    private Long user_id;
     private String action;
     private LocalDate done_at;
 
-    public String getUser_id() {
+    public Long getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(String user_id) {
+    public void setUser_id(Long user_id) {
         this.user_id = user_id;
     }
 
