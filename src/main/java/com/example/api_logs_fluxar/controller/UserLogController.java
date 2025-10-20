@@ -14,7 +14,7 @@ import java.time.LocalDate;
 import java.util.List;
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/userlogs")
+@RequestMapping("api/user/logs")
 public class UserLogController implements UserLogOpenAPI {
     UserLogRepository userLogRepository;
     UserLogService userLogService;
